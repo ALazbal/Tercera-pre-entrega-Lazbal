@@ -1,0 +1,37 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+
+    Aca se ve la camada solicitada!
+
+    <div class="container">
+           
+        <a class="btn btn-primary" href="{% url 'Inicio' %}">Volver al Inicio</a>
+    
+    </div>
+
+{% endblock %}
+    
+{% block formulario %}
+
+<hr>
+    
+<p>Estamos buscando a la camada nro. {{camada}}.</p>
+
+<ul>
+
+{% for x in resultado %}
+    
+<ol>
+
+    {{x.nombre}}
+
+</ol>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+{% endblock %} 

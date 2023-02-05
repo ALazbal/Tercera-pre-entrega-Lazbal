@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+
+
+{% block titulo %}
+                              
+    Aca se ven los cursos !
+
+    <div class="container">
+        
+        <a class="btn btn-primary" href="{% url 'Crear Curso' %}">Registrar Curso</a>
+    
+    </div>
+
+{% endblock %}
+
+{% block formulario %}
+
+<hr>
+
+{% for cursos in listaCursos %}
+
+<ol>
+    <p>{{cursos.nombre}} {{cursos.camada}}</p>
+</ol>
+
+{% endfor %}
+
+<hr>
+
+{% endblock %}

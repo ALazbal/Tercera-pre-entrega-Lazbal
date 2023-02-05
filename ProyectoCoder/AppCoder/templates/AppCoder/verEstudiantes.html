@@ -1,0 +1,35 @@
+<!-- extends hereda todo lo del inicio ej: formato -->
+{% extends "AppCoder/padre.html "%}
+
+
+<!-- el bloque mantiene ese lugar igual -->
+{% block titulo %}
+
+    ¡Aca se ven los estudiantes!
+
+
+    <div class="container">
+           
+        <a class="btn btn-primary" href="{% url 'Crear Estudiante' %}">Registrar Estudiante</a>
+    
+    </div>
+
+
+{% endblock %}
+
+
+{% block formulario %}
+
+<hr>
+
+{% for estudiante in listaEstudiantes%}
+
+<ol>
+    <p>{{estudiante.nombre}} {{estudiante.apellido}}</p>
+</ol>
+
+{% endfor %}
+
+<hr>
+
+{% endblock %}

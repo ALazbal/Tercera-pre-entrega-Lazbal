@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+
+    ¡Aca se ve el listado de profesores!
+
+    <div class="container">
+        
+        <a class="btn btn-primary" href="{% url 'Crear Profesor' %}">Registrar Profesor</a>
+    
+    </div>
+
+{% endblock %}
+
+{% block formulario %}
+
+<hr>
+
+{% for profe in listaProfes%}
+
+<ol>
+    <p>{{profe.nombre}} {{profe.apellido}}</p>
+</ol>
+
+{% endfor %}
+
+<hr>
+
+{% endblock %}

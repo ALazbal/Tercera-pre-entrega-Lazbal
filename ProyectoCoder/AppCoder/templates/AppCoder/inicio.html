@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+
+¡Bienvenido a mi pagina de inicio!
+
+{% endblock %}
+
+{% block formulario %}
+
+<hr>
+
+<p> Busca cursos ingresando el numero de camada:</p>
+
+<form action = "/AppCoder/resultados_busqueda/" method="GET"> 
+
+    <input type="number" name = "camada">
+        
+    <input type="submit" name = "Buscar">
+    
+    
+</form>
+
+<hr>
+
+{% endblock %} 
+    

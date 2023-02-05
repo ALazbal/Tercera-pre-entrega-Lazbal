@@ -1,0 +1,51 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Aca se registran estudiantes!
+{% endblock %}
+    
+{% block formulario %}
+
+<style>
+
+    .registro{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boton{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<hr>
+
+<form action = "" method="POST"> {% csrf_token %}
+
+    <div class="registro">    
+        
+        <table>
+        
+        {{ formulario.as_table }}
+    
+        </table>  
+  
+    </div>
+    
+    <hr>    
+    
+    <div class="boton">
+    
+        <input  type = "submit" value="Enviar">
+    
+    </div>
+
+</form>
+
+{% endblock %} 

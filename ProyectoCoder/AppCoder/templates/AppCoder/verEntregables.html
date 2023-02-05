@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+
+    ¡Estos son los entregables!
+
+    <div class="container">
+        
+        <a class="btn btn-primary" href="{% url 'Crear Entregable' %}">Registrar Entregable</a>
+    
+    </div>
+
+{% endblock %}
+
+{% block formulario %}
+
+<hr>
+
+{% for entregable in listaEntregables %}
+
+<ol>
+    <p>{{entregable.nombre}} {{entregable.fechaDeEntrega}}</p>
+</ol>
+
+{% endfor %}
+
+<hr>
+
+{% endblock %}
